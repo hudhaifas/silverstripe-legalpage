@@ -1,0 +1,60 @@
+@import "../colors.less";
+@import "../mixins/all.less";
+@import "../variables.less";
+
+/* Legal */
+
+.legalpage {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    text-align: justify;
+
+    .legal-lastupdate {
+        display: inline-block;
+        background-color: @color-light; 
+        padding: 10px; 
+        margin: 10px 0;
+
+        .legal-lock {
+            display: inline-block;
+            margin: 7px 10px;
+            color: @color-light-darken;
+        }
+
+        .legal-clearance {
+            display: inline-block;
+            font-size:13px;
+            margin: 7px 10px;
+            line-height:16px;
+        }
+    }
+
+    ins {
+        background-color: #DFD;
+        padding: 2px;
+        text-decoration: none;
+    }
+
+    del {
+        background-color: #FDD;
+        padding: 2px;
+        color: #ff4444;
+    }
+    
+    h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    ul {
+        li {
+            text-align: justify;
+        }
+    }
+}

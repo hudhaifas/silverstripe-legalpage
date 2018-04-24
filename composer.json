@@ -1,0 +1,27 @@
+{
+    "name": "hudhaifas/silverstripe-legalpage",
+    "description": "Great Date Field for B.C. dates.",
+    "type": "silverstripe-vendormodule",
+    "homepage": "https://github.com/hudhaifas/silverstripe-legalpage",
+    "keywords": ["silverstripe", "great date", "field", "date"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hudhaifa Shatnawi",
+            "email": "me@hudhaifa.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/hudhaifas/silverstripe-legalpage/issues"
+    },
+    "require": {
+        "silverstripe/framework": "^4",
+        "silverstripe/vendor-plugin": "^1.0"
+    },
+    "extra": {
+        "installer-name": "legalpage",
+        "expose": [
+            "res/css"
+        ]
+    }
+}
