@@ -1,14 +1,15 @@
-## SilverStripe Great Date Field
+## SilverStripe Legal Page
 
 [![Latest Stable Version](https://poser.pugx.org/hudhaifas/silverstripe-legalpage/v/stable)](https://packagist.org/packages/hudhaifas/silverstripe-legalpage) [![Total Downloads](https://poser.pugx.org/hudhaifas/silverstripe-legalpage/downloads)](https://packagist.org/packages/hudhaifas/silverstripe-legalpage) [![Latest Unstable Version](https://poser.pugx.org/hudhaifas/silverstripe-legalpage/v/unstable)](https://packagist.org/packages/hudhaifas/silverstripe-legalpage) [![License](https://poser.pugx.org/hudhaifas/silverstripe-legalpage/license)](https://packagist.org/packages/hudhaifas/silverstripe-legalpage)
 
-Great Date Field for B.C. dates
+Presents any legal document/policy need to show the versioned changes
 
 ### Features
-- Allow storing B.C. dates in the database
+- Allow publishing legal documents and policies with ability to compare with old versions.
 
 ### Requirements
 - SilverStripe Framework 4.x
+- SilverStripe CMS 4.x
 
 ### Installation
 - Install the module through composer:
