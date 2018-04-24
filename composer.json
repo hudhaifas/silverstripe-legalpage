@@ -1,9 +1,9 @@
 {
     "name": "hudhaifas/silverstripe-legalpage",
-    "description": "Great Date Field for B.C. dates.",
+    "description": "Presents any legal document/policy need to show the versioned changes.",
     "type": "silverstripe-vendormodule",
     "homepage": "https://github.com/hudhaifas/silverstripe-legalpage",
-    "keywords": ["silverstripe", "great date", "field", "date"],
+    "keywords": ["silverstripe", "legal", "page", "policy"],
     "license": "MIT",
     "authors": [
         {
@@ -16,10 +16,11 @@
     },
     "require": {
         "silverstripe/framework": "^4",
+        "silverstripe/cms": "^4",
         "silverstripe/vendor-plugin": "^1.0"
     },
     "extra": {
-        "installer-name": "legalpage",
+        "installer-name": "silverstripe-legalpage",
         "expose": [
             "res/css"
         ]
