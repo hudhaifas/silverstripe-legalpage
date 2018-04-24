@@ -8,12 +8,12 @@
 class LegalPageController
         extends PageController {
 
-    private static $allowed_actions = array(
+    private static $allowed_actions = [
         'archive'
-    );
-    private static $url_handlers = array(
+    ];
+    private static $url_handlers = [
         'archive/$VersionID/$OriginID' => 'archive'
-    );
+    ];
 
     public function archive() {
         $versions = $this->allVersions();
@@ -28,11 +28,11 @@ class LegalPageController
             $version = $this->compareVersions($versionID, $originID);
 
             return $this
-                            ->customise(array(
+                            ->customise([
                                 'Content' => $version->Content,
                                 'VersionDate' => $version->LastEdited
-                            ))
-                            ->renderWith(array('LegalPage', 'LegalPage', 'Page'));
+                            ])
+                            ->renderWith(['LegalPage', 'LegalPage', 'Page']);
         } else {
             $currentVersionID = $this->Version;
 
@@ -47,10 +47,10 @@ class LegalPageController
             }
 
             return $this
-                            ->customise(array(
+                            ->customise([
                                 'Versions' => $versions
-                            ))
-                            ->renderWith(array('LegalPage_versions', 'LegalPage', 'Page'));
+                            ])
+                            ->renderWith(['LegalPage_versions', 'LegalPage', 'Page']);
         }
     }
 

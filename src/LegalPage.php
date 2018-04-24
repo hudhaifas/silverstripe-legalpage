@@ -8,6 +8,6 @@
 class LegalPage
         extends Page {
 
-    private static $description = 'Dated Legal Page.';
+    private static $description = 'Versioned Legal Page.';
 
 }
