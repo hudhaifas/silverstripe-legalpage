@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\View\Requirements;
+
 /**
  *
  * @author Hudhaifa Shatnawi <hudhaifa.shatnawi@gmail.com>
@@ -14,6 +16,12 @@ class LegalPageController
     private static $url_handlers = [
         'archive/$VersionID/$OriginID' => 'archive'
     ];
+
+    protected function init() {
+        parent::init();
+
+        Requirements::css("hudhaifas/silverstripe-legalpage: res/css/legalpage.css");
+    }
 
     public function archive() {
         $versions = $this->allVersions();
