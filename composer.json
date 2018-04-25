@@ -22,7 +22,8 @@
     "extra": {
         "installer-name": "silverstripe-legalpage",
         "expose": [
-            "res/css"
+            "res/css",
+            "res/images"
         ]
     }
 }
