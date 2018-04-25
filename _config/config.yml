@@ -1,7 +1,3 @@
 ---
 Name: legalpage
 ---
-
-SilverStripe\Control\Controller:
-  extensions:
-    - LegalPageExtension
