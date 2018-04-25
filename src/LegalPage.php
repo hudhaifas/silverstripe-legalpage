@@ -8,6 +8,7 @@
 class LegalPage
         extends Page {
 
+    private static $icon = "hudhaifas/silverstripe-legalpage: res/images/legal.png";
     private static $description = 'Versioned Legal Page.';
 
 }
