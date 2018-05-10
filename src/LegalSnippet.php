@@ -36,7 +36,7 @@ class LegalSnippet
                         ->renderWith('Includes/LegalSnippet');
     }
 
-    public static function get_template_global_variables(): array {
+    public static function get_template_global_variables() {
         return array(
             'LegalSnippet' => 'get_random_snippet',
         );
