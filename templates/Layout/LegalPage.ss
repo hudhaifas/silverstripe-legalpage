@@ -11,5 +11,5 @@
         </div>
     </div>
 
-    $Content
+    $Content.RAW
 </div>
