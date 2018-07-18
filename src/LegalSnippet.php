@@ -18,6 +18,9 @@ class LegalSnippet
     private static $has_one = [
         'LegalPage' => LegalPage::class
     ];
+    private static $translate = [
+        'Text'
+    ];
 
     public static function get_random_snippet() {
         $randomPage = LegalPage::get()->sort("RAND()")->limit("1")->first();
