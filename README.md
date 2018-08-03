@@ -6,6 +6,7 @@ Presents any legal document/policy need to show the versioned changes
 
 ### Features
 - Allow publishing legal documents and policies with ability to compare with old versions.
+- Show a dialog for alerting users about the use of cookies on your website to meet EU law, add `$EUCookieSnippet` to the page body.
 
 ### Requirements
 - SilverStripe Framework 4.x

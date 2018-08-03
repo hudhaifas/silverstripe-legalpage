@@ -24,7 +24,8 @@
         "installer-name": "silverstripe-legalpage",
         "expose": [
             "res/css",
-            "res/images"
+            "res/images",
+            "res/js"
         ]
     }
 }
