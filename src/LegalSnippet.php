@@ -22,6 +22,10 @@ class LegalSnippet
         'Text'
     ];
 
+    public function getTitle() {
+        return $this->Text;
+    }
+
     public static function get_random_snippet() {
         $randomPage = LegalPage::get()->sort("RAND()")->limit("1")->first();
         $snippet = $randomPage->Snippets()->sort("RAND()")->limit("1")->first();
