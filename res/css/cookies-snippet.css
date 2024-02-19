@@ -1,0 +1,32 @@
+.eu-cookieinfo {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  height: auto;
+  min-height: 21px;
+  z-index: 2147483647;
+  background: #eeeeee;
+  color: #333333;
+  line-height: 21px;
+  padding: 8px 18px;
+  font-size: 14px;
+  text-align: center;
+  bottom: 0px;
+  opacity: 1;
+}
+.eu-cookieinfo .eu-cookieinfo-close {
+  float: right;
+  display: block;
+  padding: 5px 8px;
+  min-width: 100px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000000;
+  background: #f1d600;
+  text-align: center;
+}
+.eu-cookieinfo .eu-cookieinfo-more {
+  text-decoration: none;
+}
+/*# sourceMappingURL=cookies-snippet.css.map */
