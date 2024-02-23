@@ -27,8 +27,8 @@ class LegalSnippet
     }
 
     public static function get_random_snippet() {
-        $randomPage = LegalPage::get()->sort("RAND()")->limit("1")->first();
-        $snippet = $randomPage->Snippets()->sort("RAND()")->limit("1")->first();
+        $randomPage = LegalPage::get()->orderBy("RAND()")->limit("1")->first();
+        $snippet = $randomPage->Snippets()->orderBy("RAND()")->limit("1")->first();
 
         if (!$snippet) {
             return;
