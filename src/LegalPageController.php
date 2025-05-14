@@ -20,7 +20,7 @@ class LegalPageController
     protected function init() {
         parent::init();
 
-        Requirements::css("hudhaifas/silverstripe-legalpage: res/css/legalpage.css");
+        Requirements::css("hudhaifas/silverstripe-legalpage: res/css/legalpage.min.css");
     }
 
     public function archive() {

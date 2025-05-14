@@ -1,4 +1,4 @@
-<div id="eu-cookieinfo" class="eu-cookieinfo">
+<div id="eu-cookieinfo" class="eu-cookieinfo" style="display:none">
     <div id="eu-cookieinfo-inner">
         <div class="eu-cookieinfo-close">✖</div>
         <span style="display:block;padding:5px 0 5px 0;">

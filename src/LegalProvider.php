@@ -27,9 +27,8 @@ class LegalProvider
             return;
         }
 
-        Requirements::css('hudhaifas/silverstripe-legalpage: res/css/cookies-snippet.css');
-        Requirements::javascript('https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js');
-        Requirements::javascript('hudhaifas/silverstripe-legalpage: res/js/cookies.js');
+        Requirements::css('hudhaifas/silverstripe-legalpage: res/css/cookies-snippet.min.css', 'all', ['defer' => true]);
+        Requirements::javascript('hudhaifas/silverstripe-legalpage: res/js/cookies.min.js', ['defer' => true]);
 
         return $currentPage
                         ->customise([

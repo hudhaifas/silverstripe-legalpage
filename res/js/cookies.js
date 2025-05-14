@@ -1,65 +1,52 @@
-$(document).ready(function () {
-    var cookie = Cookies.get("eu-cookie");
-    var hiddenSnippets = cookie ? cookie.split(" | ").getUnique() : [];
-    var cookieExpires = 365; // cookie expires in 365 days
+document.addEventListener('DOMContentLoaded', function () {
+    const cookieKey = 'eu-cookie';
+    const cookieExpires = 365;
+    const cookie = getCookie(cookieKey);
+    let hiddenSnippets = cookie ? getUnique(cookie.split(' | ')) : [];
 
-    // Remember the message was hidden
-    $.each(hiddenSnippets, function () {
-        var pid = this;
-        $('#' + pid).hide();
-    });
+    const cookieInfo = document.getElementById('eu-cookieinfo');
+    const closeBtn = document.querySelector('.eu-cookieinfo-close');
 
-    // Add Click functionality
-    $('.eu-cookieinfo-close').click(function () {
-        $('#eu-cookieinfo').hide();
-        updateCookie($('#eu-cookieinfo'));
-    });
+    // Show the cookie banner only if it hasn't been hidden before
+    if (cookieInfo && !hiddenSnippets.includes('eu-cookieinfo')) {
+        cookieInfo.style.display = 'block';
+    }
 
-    // Update the Cookie
+    // Add close button functionality
+    if (closeBtn && cookieInfo) {
+        closeBtn.addEventListener('click', function () {
+            cookieInfo.style.display = 'none';
+            updateCookie(cookieInfo);
+        });
+    }
+
     function updateCookie(el) {
-        var indx = el.attr('id');
-        var tmp = hiddenSnippets.getUnique();
-        if (el.is(':hidden')) {
-            // add item to hidden list
-            tmp.push(indx);
+        const id = el.id;
+        let tmp = getUnique([...hiddenSnippets]);
+
+        if (el.style.display === 'none') {
+            if (!tmp.includes(id)) tmp.push(id);
         } else {
-            // remove element id from the list
-            tmp.splice(tmp.indexOf(indx), 1);
+            tmp = tmp.filter(item => item !== id);
         }
-        hiddenSnippets = tmp.getUnique();
-        Cookies.set("eu-cookie", hiddenSnippets.join(' | '), {expires: cookieExpires});
+
+        hiddenSnippets = getUnique(tmp);
+        setCookie(cookieKey, hiddenSnippets.join(' | '), cookieExpires);
     }
 
-    if (hiddenSnippets.indexOf('eu-cookieinfo') == -1) {
-        $('#eu-cookieinfo').slideDown();
+    function getUnique(arr) {
+        return [...new Set(arr)];
     }
 
+    function setCookie(name, value, days) {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/';
+    }
+
+    function getCookie(name) {
+        return document.cookie.split('; ').reduce((r, v) => {
+            const parts = v.split('=');
+            return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+        }, '');
+    }
 });
-
-// Return a unique array.
-Array.prototype.getUnique = function () {
-    var o = new Object();
-    var i, e;
-    for (i = 0; e = this[i]; i++) {
-        o[e] = 1
-    }
-
-    var a = new Array();
-    for (e in o) {
-        a.push(e)
-    }
-    return a;
-}
-
-// Fix indexOf in IE
-if (!Array.prototype.indexOf) {
-    Array.prototype.indexOf = function (obj, start) {
-        for (var i = (start || 0), j = this.length; i < j; i++) {
-            if (this[i] == obj) {
-                return i;
-            }
-        }
-        return -1;
-    }
-}
-
